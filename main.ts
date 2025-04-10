@@ -24,17 +24,12 @@ function on_received_number (receivedNumber: number) {
     }
 }
 function SjekkVinner () {
-    // Lookup the result directly from the table
    let resultCode = rpsResultsTable[player1Valg][player2Valg]
-    // Perform action based on the result code
     if (resultCode == 0) {
         basic.showString("TIE")
     } else if (resultCode == 1) {
-        // AI wins
         VinnerLogikk("AI")
     } else {
-        // resultCode === 2
-        // DU wins
         VinnerLogikk("DU")
     }
     player1Valg = 5
